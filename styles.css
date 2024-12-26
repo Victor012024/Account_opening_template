@@ -1,0 +1,101 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: goldenrod;
+  color: white;
+  padding: 20px;
+}
+
+.container {
+  margin: 20px 0;
+}
+
+.container .form-details {
+  border: 10px solid white;
+  padding: 20px;
+  border-radius: 10px;
+  border-color: aqua;
+  position: relative;
+  background-color: green;
+}
+
+.form-details fieldset {
+  padding: 30px;
+  border-radius: 10px;
+  border: 5px solid gold;
+}
+
+.form-details input {
+  padding: 5px;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.form-details label {
+  position: absolute;
+  left: 65px;
+  pointer-events: none;
+  color: black;
+  padding-top: 10px;
+  font-size: small;
+  transition: 0.3s ease;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  transform: translateY(-24px);
+  color: white;
+  font-size: 12px;
+}
+
+button {
+  margin-left: 30px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  box-shadow: 2px 9px gray;
+  transition: 0.6 s ease;
+  &:hover {
+    transform: translateY(3px);
+    box-shadow: 2px 5px gray;
+  }
+}
+
+#message {
+  margin-left: 50px;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  transition: all .5s ease;
+  background-color: black;
+  color: white;
+
+}
+
+
+.error-message {
+    opacity: 0; 
+    visibility: hidden; 
+    max-height: 0; 
+    overflow: hidden; 
+    transition: opacity 0.5s ease, max-height 0.5s ease, visibility 0.5s ease;
+    background-color: #f8d7da;
+    color: #721c24; 
+    padding: 10px;
+    border: 1px solid #f5c6cb; 
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  
+  .error-message.show {
+    opacity: 1; 
+    visibility: visible; 
+    max-height: 200px; 
+  }
+  
